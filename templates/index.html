@@ -1,0 +1,13 @@
+<!--
+TEMPLATE
+welcome page
+-->
+{% extends "base.html" %}
+
+
+{% block content %}
+	<p>This is the Asparso project main page.</p>
+	<!-- test Q4 (display settings file variables) -->
+	The root directory is: {{ settings.BASE_DIR }}.<br />
+	The template directory is: {{ settings.TEMPLATE_DIR }}.
+{% endblock %}

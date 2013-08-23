@@ -1,0 +1,47 @@
+<!--
+TEMPLATE
+contains the template of each webpage: doctype, left menu, right content template, css, js, etc.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>{% block title %}Arpaso test task{% endblock%}</title>
+<!-- Q6: Jquery functions to display a calendar for date fields -->
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script>
+$(function() {
+    $( ".datepicker" ).datepicker({
+		dateFormat: 'yy-mm-dd',
+		changeMonth: true,
+		changeYear: true
+    });
+  });
+</script>
+</head>
+<body>
+
+<!--menu-->
+<a href="/">Home</a>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="/user_app/add_profile">Add a user</a>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="/user_app/show_profile?pk={{ user.pk }}">My profile</a>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="/user_app/update_profile?pk={{ user.pk }}">Update my profile</a>
+&nbsp;&nbsp;&nbsp;&nbsp;
+{% if user.username == "" %}
+	<a href="/auth/">Log in</a>
+{% else %}
+	Welcome {{ user.username }} | <a href="/auth/">Log out</a>
+{% endif %}
+<br /><br />
+
+<div id="content">
+	{% block content %}
+	{% endblock %}
+</div>
+
+</body>
+</html>

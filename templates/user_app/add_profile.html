@@ -1,0 +1,16 @@
+<!-- Q0: add user's profile -->
+
+{% extends "base.html" %}
+
+{% block content %}
+
+	<!-- displays success message -->
+    {% for message in messages %}
+		{{ message }}
+    {% endfor %}
+
+	<form action="" method="post">{% csrf_token %}
+	{{ form.as_p }}
+	<input type="submit" value="Submit" />
+	</form>
+{% endblock %}

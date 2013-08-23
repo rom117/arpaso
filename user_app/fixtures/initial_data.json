@@ -1,0 +1,24 @@
+[
+	{
+		"pk": 2,
+		"model": "auth.user",
+		"fields": {
+			"password": "pbkdf2_sha256$10000$5avIK5b2LpQ1$sTwVrwGkgfC1VYmUWandGOEbmLFkY1xzhuUPF9HlClM=",
+			"username": "myusername",
+			"email": "myemail@email.com",
+			"first_name": "myfirstname",
+			"last_name": "mylastname"
+		}
+	},
+
+	{
+		"pk": 2,
+		"model": "user_app.usermodel",
+		"fields": {
+			"date_of_birth": "2000-01-01",
+			"biography": "mybiography",
+			"contacts": "mycontacts"
+		}
+	}
+
+]

@@ -1,0 +1,14 @@
+<!-- Q1: show user's profile -->
+
+{% extends "base.html" %}
+
+{% block content %}
+	<p>Username: {{ object.username }}</p>
+	<p>First name: {{ object.first_name }}</p>
+	<p>Last name: {{ object.last_name }}</p>
+	<p>Date of birth: {{ object.date_of_birth }}</p>
+	<p>Biography: {{ object.biography }}</p>
+	<p>Contacts: {{ object.contacts }}</p>
+{% endblock %}
+
+
